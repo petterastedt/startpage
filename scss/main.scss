@@ -1,0 +1,205 @@
+// VARIABLES //
+$primaryColor: #212121;
+$secondaryColor: #777777;
+$textColor: #eeeeee;
+$lightPrimaryColor: #e0e0e0;
+// STATES //
+.light-mode {
+    background-color: $textColor;
+    color: $primaryColor;
+}
+.dot-active {
+    background: $textColor !important;
+    transition: all .4s ease-in-out; 
+}
+// GLOBAL //
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    background: $primaryColor;
+    font-family: 'Quicksand', sans-serif;
+    padding-bottom: 40px;
+
+    .toolbar {
+        color: $textColor;
+        display: flex;
+        float: right;
+        justify-content: space-between;
+        margin: 10px 5px;
+        width: 100%;
+
+        .info-button {
+            display: none;
+            background: $secondaryColor;
+            border-radius: 50%;
+            cursor: pointer;
+            font-family: 'Slabo 27px', serif;
+            font-size: 23px;
+            font-weight: bold;
+            height: 30px;
+            justify-content: center;
+            margin: 0 0 0 20px;
+            text-align: center;
+            width: 30px;
+        
+            &:hover {
+                color: $textColor;
+            }
+        }
+        .info-box {
+            animation: fadeIn .3s;
+            background: $primaryColor;
+            border: 1px solid #fff;
+            color: $textColor;
+            display: none;
+            left: 20px;
+            position: absolute;
+            top: 50px;
+            opacity: .8;
+            width: 250px;
+        }
+
+        .time {
+            color: $secondaryColor;
+            font-size: 1rem;
+            margin: 4px 20px;
+        }
+
+        .switch-wrapper, .time-info-wrapper {
+            display: flex;
+        }
+
+        input[type=checkbox]{
+            display: none;
+            height: 0;
+            width: 0;
+            
+            &:checked + label {
+                background: $secondaryColor;
+            }
+        
+            &:checked + label:after {
+                left: calc(100% - 2px);
+                transform: translateX(-100%);
+            }
+        }
+        label {
+            background: $secondaryColor;
+            border-radius: 2rem;
+            cursor: pointer;
+            display: block;
+            height: 25px;
+            position: relative;
+            text-indent: -9999px;
+            width: 50px;
+            
+            &:after {
+                background: $textColor;
+                border-radius: 90px;
+                content: '';
+                height: 21px;
+                left: 2px;
+                width: 21px;
+                position: absolute;
+                top: 2px;
+                transition: all .2s ease-in-out;
+            }
+        }
+        .on-off, .darkmode {
+            color: $secondaryColor;
+            font-size: 1rem;
+            margin: 3px 10px;
+            padding: 0;
+        }
+    }
+}
+.search-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    .logo {
+        color: $secondaryColor;
+        cursor: pointer;
+        font-size: 20vh;
+        margin: 20px 20px 5px 20px;
+    }
+
+    .dots-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 20px 20px 20px;
+        width: 100px;
+
+        .dot {
+            background: $secondaryColor;
+            border-radius: 50%;
+            height: 5px;
+            margin: 10px;
+            width: 5px;
+        }
+    }
+
+    form {
+        margin: 0 auto;
+        width: 70vw;
+
+        .fa-search {
+            color: $secondaryColor;
+            margin: 15px 0 0 10px;
+            position: absolute;
+        }
+
+        input {
+            background-color: #3d3d3d;
+            border: none;
+            border-radius: 4px;
+            color: $textColor;
+            font-size: 1rem;
+            margin: 0 auto;
+            padding: 13px 13px 13px 35px;
+            width: 70%;
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}
+.info {
+    animation: slideIn 8s ease-in-out;
+    color: $secondaryColor;
+    font-size: 1rem;
+    left: -100%;
+    margin: 30px 0 0 0;
+    opacity: .6;
+    position: relative;
+}
+// ANIMATIONS //
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideIn {
+    0% {left: -100%;}
+    10% {left: 0;}
+    90% {left: 0;}
+    100% {left: 100%;}
+}
+// MEDIA QUERIES //
+@media only screen and (max-width: 500px) {
+    form {
+        width: 80vw !important;
+    }
+    input {
+        width: 80% !important;
+    }
+}

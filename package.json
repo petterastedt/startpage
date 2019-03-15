@@ -1,0 +1,14 @@
+{
+  "name": "startpage",
+  "version": "1.0.0",
+  "description": "Customized startpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Petter Åstedt",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
