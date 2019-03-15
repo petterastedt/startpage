@@ -8,7 +8,6 @@ const toggleDark = document.querySelector('#switch'),
       icon = document.querySelector('.icon'),
       input = document.querySelector('.input'),
       infoBtn = document.querySelector('.info-button'),
-      infoBox = document.querySelector('.info-box'),
       dotsWrap = document.querySelector('.dots-wrapper');
 
 let curEng = 0;   
@@ -39,16 +38,6 @@ logo.addEventListener('click', () => {
         icon.classList.add(objValues[curEng].icon);
         input.placeholder = objValues[curEng].placeholder;
         dots.forEach(() => dots[curEng].classList.add('dot-active'));
-    }
-});
-
-// TOGGLE INFO BOX
-
-infoBtn.addEventListener('click', () => {
-    if(infoBox.style.display == 'block'){
-        infoBox.style.display ='none';
-    } else {
-        infoBox.style.display ='block';
     }
 });
 
