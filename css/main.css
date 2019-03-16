@@ -102,6 +102,15 @@ body {
     cursor: pointer;
     font-size: 20vh;
     margin: 20px 20px 5px 20px; }
+  .search-wrapper .duckduckgo {
+    background: url("../img/duckduckgo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 20vh;
+    width: 250px;
+    position: relative;
+    top: 22px; }
   .search-wrapper .dots-wrapper {
     display: flex;
     justify-content: center;
@@ -112,7 +121,7 @@ body {
       border-radius: 50%;
       height: 5px;
       margin: 10px;
-      width: 5px; }
+      min-width: 5px; }
   .search-wrapper form {
     margin: 0 auto;
     width: 70vw; }

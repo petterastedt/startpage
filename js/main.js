@@ -63,6 +63,7 @@ toggleDark.addEventListener('click', () => {
 
 const searchEngines = [
     { name: 'Google', icon: 'fa-google', url: 'https://google.com/search', query: '?q=', placeholder: 'Search Google', dot: '<div class="dot"></div>' },
+    { name: 'DuckDuckGo', icon: 'duckduckgo', url: 'https://www.duckduckgo.com', query: '?q=', placeholder: 'Search Duckduckgo', dot: '<div class="dot"></div>' },
     { name: 'Youtube', icon: 'fa-youtube', url: 'https://www.youtube.com/results', query: '?search_query="', placeholder: 'Search Youtube', dot: '<div class="dot"></div>' },
     { name: 'Reddit', icon: 'fa-reddit-alien', url: 'https://reddit.com/r/', query: '', placeholder: 'Subreddit /r', dot: '<div class="dot"></div>' },
     { name: 'Soundcloud', icon: 'fa-soundcloud', url: 'https://soundcloud.com/search', query: '?q=', placeholder: 'Search Soundcloud', dot: '<div class="dot"></div>' }

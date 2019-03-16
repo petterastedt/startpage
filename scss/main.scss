@@ -133,6 +133,17 @@ body {
         margin: 20px 20px 5px 20px;
     }
 
+    .duckduckgo {
+        background: url('../img/duckduckgo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 20vh;
+        width: 250px;
+        position: relative;
+        top: 22px;
+    }
+
     .dots-wrapper {
         display: flex;
         justify-content: center;
@@ -144,7 +155,7 @@ body {
             border-radius: 50%;
             height: 5px;
             margin: 10px;
-            width: 5px;
+            min-width: 5px;
         }
     }
 
