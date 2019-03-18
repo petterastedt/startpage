@@ -96,4 +96,4 @@ else {
     clockDisplay.innerHTML = hours + ":" + minutes;
     }    
 }
-setInterval(clock, 1000);
+setInterval(clock, 1000); // UPDATE CLOCK EVERY SECOND
